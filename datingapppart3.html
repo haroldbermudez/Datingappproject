@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dating Webpage</title>
+    <link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css"
+     rel="stylesheet" type="text/css" />
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+</head>
+  <style>
+
+      fieldset {
+          background-color: lightyellow;
+          border: 10px solid yellow;
+          margin-bottom: 10px;
+          width: 720px;
+      }
+      textarea {
+          width: 360px;
+          height: 50px;
+      }
+      label {
+          text-align: right;
+          vertical-align: top;
+          display: inline-block;
+          width: 180px;
+      }
+      h4 {
+          display: inline;
+          font-weight: normal;
+          Background-color: red;
+          color: aliceblue;
+          padding: 4px;
+      }
+      h5 {
+          display: inline;
+          font-weight: normal;
+          Background-color: purple;
+          color: aliceblue;
+          padding: 6px;
+      }
+.contactInfo label {
+    width: auto;
+}
+ article, aside, figure, footer, header,menu, nav, section {
+     display: block;
+ }
+  </style>
+<body>
+
+    <h1>Please enter your details for our dating website!</h1>
+<fieldset>
+    <table>
+    <tr>
+    <legend>Your Face</legend>
+    <td><label for= "your image">Your image</label>
+    <input type="file" onchange="readURL(this);" id="preview"
+            required>
+        </td>
+        </tr>
+        <tr>
+        <td><label for="image preview">Image Preview:</label>
+        <img id="blah" src="#" alt="your image"/>
+        </td>
+        <tr/>
+    </table>
+</fieldset>
+<fieldset>
+    <legend>Your General details</legend>
+    <table>
+<tr>
+    <td><label for="Name">Name:</label></td>
+    <td><input type="text"[required]></td>
+   </tr>
+        <tr>
+        <td><label for="Gender">Gender:</label></td>
+         <td><input type="radio">Male</label required>
+         <input type="radio">Female</label required>
+        </tr>
+
+        <tr>
+            <td><label for="Age">Age:</label></td>
+           <td><input type="number"[Required]></td>
+        </tr>
+
+        <tr>
+            <td><label for="Date of birth">Date of birth:</label></td>
+            <td><input type="date"[Required]></td>
+        </tr>
+
+        <tr>
+            <td><label for="Favorite color">Favorite color:</label></td>
+            <td><input type="color"[Required]></td>
+        </tr>
+
+        <tr>
+            <td><label for="Which country">Which Country:</label></td>
+            <td><select>
+                <option value="United States of America">United States of America</option>
+                <option value="China">China</option>
+                <option value="Canada">Canada</option>
+                <option value="Africa">Africa</option>
+                <option value="Mexico">Mexico</option>
+                <option value="Brazil">Brazil</option>
+                <option value="No selection">No selection</option>
+            </select></td>
+        </tr>
+        </table>
+</table>
+</fieldset>
+<fieldset>
+    <legend>Your indicators</legend>
+    <table>
+<tr>
+    <td><label for="height">Height:</label></td>
+    <td><h4>Short</h4><input type="range" man="0" max="100"><h5>Tall</h5></td>
+
+
+
+</tr>
+<tr>
+    <td><label for="Salary">Salary:</label></td>
+    <td><h4>Poor</h4><input type="range" min="0" max="100"><h5>Rich</h5></td>
+</tr>
+    </table>
+</fieldset>
+<fieldset>
+  <legend>Your Contact Information</legend>
+    <table>
+
+<tr>
+    <td><label for="email">E-mail:</label></td>
+    <td><input type="email" Required></td>
+    </tr>
+
+
+
+     <tr>
+        <td><label for="Mobile">Mobile:</label></td>
+    <td><input type="tel" Required></td>
+
+
+</tr>
+        <tr>
+            <td><label for="Address">Address:</label></td>
+            <td><textarea rows="2.5" cols="20">
+            </textarea></td>
+
+
+
+        </tr>
+        <tr>
+            <td><label for="Method to contact you">Method to Contact you:</label></td>
+            <td><input type="checkbox" class="contactInfo" Required>E-mail
+            <input type="checkbox" class="contactInfo " Required>Whats App
+            <input type="checkbox" class="contactInfo" Required>In-app Chat</td>
+
+
+        </tr>
+
+    </table>
+
+
+</fieldset>
+    <input type="submit" id="submit"
+           Value="Submit">
+
+
+
+<script type="text/javascript">
+function readURL(input) {
+    if(input.files && input.files[0]) {
+        var reader= new FileReader();
+        reader.onload=function (e) {
+            $('#blah')
+                    .attr('src', e.target.result)
+                    .width(150)
+                    .height(200)
+        };
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+</script>
+
+</body>
+</html>
